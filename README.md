@@ -1,0 +1,2 @@
+# SolrCloudHBase
+利用SolrCloud实现HBase的二级索引
