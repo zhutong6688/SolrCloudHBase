@@ -1,2 +1,6 @@
 # SolrCloudHBase
 利用SolrCloud实现HBase的二级索引
+1、当Put往HBase存入数据时，RegionObserver相当于触发器的作用，往SolrCloud的索引库里面插入要建立索引的列的对应数据。
+2、当对HBase进行多条件组合查询时，会首先在SolrCloud中查询，并返回符合条件的RowKey。然后再利用SolrCloud返回的rowkey
+进行HBase的检索。
+3、这样提高了效率，避免了Scan的遍历。扩展了HBase查询功能。
