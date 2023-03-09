@@ -4,3 +4,4 @@
 2、当对HBase进行多条件组合查询时，会首先在SolrCloud中查询，并返回符合条件的RowKey。然后再利用SolrCloud返回的rowkey
 进行HBase的检索。
 3、这样提高了效率，避免了Scan的遍历。扩展了HBase查询功能。
+4、eclispe项目
